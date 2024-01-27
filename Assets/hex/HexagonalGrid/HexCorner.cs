@@ -39,7 +39,7 @@ namespace HexagonalGrid
 		public HexCornerHandiness handiness;
 
 		private SpriteRenderer _spriteRenderer;
-		private HexTile[,] _grid;
+		private HexNode[,] _grid;
 
 		private void Awake()
 		{
@@ -89,7 +89,7 @@ namespace HexagonalGrid
 
 		private void SwitchGridLocation(HexVector h1, HexVector h2)
 		{
-			HexTile tile = _grid[h1.X, h1.Y];
+			HexNode tile = _grid[h1.X, h1.Y];
 			_grid[h1.X, h1.Y] = _grid[h2.X, h2.Y];
 			_grid[h2.X, h2.Y] = tile;
 		}

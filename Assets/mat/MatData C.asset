@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3321655fe3a33d146aa048043af09f4f, type: 3}
+  m_Name: MatData C
+  m_EditorClassIdentifier: 
+  Mat: {fileID: 5239944701696715144, guid: 37206ccfc92efa347bd0ba0f5d60ef3c, type: 3}
+  NodeMatVisual: {fileID: 2674452630597794902, guid: 9043c56eed411d34b915adb2e5455256, type: 3}
+  Index: 2
+  MatType: 2

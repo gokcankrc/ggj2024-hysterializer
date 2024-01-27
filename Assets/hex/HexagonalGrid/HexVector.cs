@@ -1,6 +1,5 @@
 using System;
 using HexagonalGrid;
-using Sirenix.OdinInspector;
 using UnityEngine;
 
 public enum HexNeighbourDirection
@@ -18,16 +17,13 @@ public struct HexVector
 {
 	public int q; // hor axis
 	public int r; // 60 degree ccw to q
-	[ShowInInspector] public int s => -q - r;
+	public int s => -q - r;
 
-	public HexTile parent;
+	public HexNode parent;
 
 
-	[ShowInInspector] public int X => q;
-	[ShowInInspector] public int Y => r / 2;
-
-	[ShowInInspector] public int X0 => q;
-	[ShowInInspector] public int Y0 => r + q / 2;
+	public int X => q;
+	public int Y => r / 2;
 
 	// From SE in ccw direction
 	public static HexVector[] NeighborDirections { get; } =
@@ -51,7 +47,7 @@ public struct HexVector
 		this.parent = null;
 	}
 
-	public HexVector(int q, int r, HexTile parent)
+	public HexVector(int q, int r, HexNode parent)
 	{
 		this.q = q;
 		this.r = r;
@@ -67,7 +63,7 @@ public struct HexVector
 		return new HexVector(q, r);
 	}
 
-	public static HexVector FromXY(int x, int y, HexTile parent)
+	public static HexVector FromXY(int x, int y, HexNode parent)
 	{
 		var hexVector = HexVector.FromXY(x, y);
 		hexVector.parent = parent;

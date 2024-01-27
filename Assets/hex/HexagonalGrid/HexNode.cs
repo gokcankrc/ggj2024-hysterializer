@@ -1,0 +1,39 @@
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.EventSystems;
+using UnityEngine.UI;
+
+public class HexNode : MonoBehaviour, IPointerClickHandler
+{
+	public HexVector hex;
+	public Image Image;
+	public NodeMatVisual currentNodeMatVisual;
+	public MatSelectionButton currentAttachedMatButton;
+
+	public void OnPointerClick(PointerEventData eventData)
+	{
+		MatSelectionManager.I.HexNodeHasBeenSelected(this);
+	}
+
+	public void AttachMat(MatSelectionButton selectedMatButton)
+	{
+		if (currentNodeMatVisual != null)
+		{
+			Debug.LogError("HexNode deteched mat internally. Should not happen.");
+			DetachMat();
+		}
+		currentAttachedMatButton = selectedMatButton;
+		var attachedMat = Instantiate(selectedMatButton.MatData.NodeMatVisual, transform.position, Quaternion.identity, transform);
+		currentAttachedMatButton.AvailableDown();
+	}
+
+	public void DetachMat()
+	{
+		if (currentNodeMatVisual != null)
+			return;
+		currentAttachedMatButton.AvailableUp();
+		Destroy(currentNodeMatVisual.gameObject);
+	}
+}

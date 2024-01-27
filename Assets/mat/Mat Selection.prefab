@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4872561124891602491}
   - component: {fileID: 4627935834879018807}
   - component: {fileID: 7085471583545078418}
+  - component: {fileID: 468504381019089238}
   m_Layer: 5
   m_Name: Mat Selection
   m_TagString: Untagged
@@ -65,7 +66,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -75,3 +76,22 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &468504381019089238
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 278028766053822575}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9fad5515b68278438700a8386fe9707, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  image: {fileID: 7085471583545078418}
+  EnabledColor: {r: 0.8113208, g: 0.8113208, b: 0.8113208, a: 1}
+  SelectedColor: {r: 1, g: 1, b: 1, a: 1}
+  DisabledColor: {r: 0.7169812, g: 0.38892847, b: 0.38892847, a: 1}
+  PressingColor: {r: 0.5566038, g: 0.5566038, b: 0.5566038, a: 1}
+  CanBeClicked: 1
+  isSelected: 1

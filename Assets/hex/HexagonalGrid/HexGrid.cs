@@ -11,11 +11,11 @@ namespace HexagonalGrid
 	public class HexGrid : MonoBehaviour
 	{
 		[SerializeField] private Vector2Int gridSize = new Vector2Int(8, 9);
-		[SerializeField] private HexTile tileObject;
+		[SerializeField] private HexNode tileObject;
 		[SerializeField] private float GridScale;
 
-		public static HexTile[,] Grid;
-		public static List<HexTile> MarkedTiles = new List<HexTile>();
+		public static HexNode[,] Grid;
+		public static List<HexNode> MarkedTiles = new List<HexNode>();
 		public static List<HexCorner> HexCorners = new List<HexCorner>();
 
 		public static HexGrid I => _i;
@@ -39,7 +39,7 @@ namespace HexagonalGrid
 			HexVector.XScale = GridScale;
 			HexVector.YScale = GridScale;
 			ClearGrid();
-			Grid = new HexTile[gridSize.x, gridSize.y];
+			Grid = new HexNode[gridSize.x, gridSize.y];
 			HexVector.Origin = transform.position;
 			for (int i = 0; i < gridSize.x; i++)
 				for (int j = 0; j < gridSize.y; j++)
@@ -64,9 +64,9 @@ namespace HexagonalGrid
 			transform.position = transform.position.Round();
 		}
 
-		public HexTile CreateHexTile(int x, int y)
+		public HexNode CreateHexTile(int x, int y)
 		{
-			var hexTile = PrefabUtility.InstantiatePrefab(tileObject, transform) as HexTile;
+			var hexTile = PrefabUtility.InstantiatePrefab(tileObject, transform) as HexNode;
 			hexTile.hex = HexVector.FromXY(x, y, hexTile);
 			var position = hexTile.hex.GetPosition();
 			hexTile.transform.position = position;

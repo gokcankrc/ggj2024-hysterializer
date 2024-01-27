@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5566631094220900149}
   - component: {fileID: 1161118109664936974}
-  - component: {fileID: 2087753418775616489}
+  - component: {fileID: 585381958492203597}
   m_Layer: 0
   m_Name: HexTile
   m_TagString: Untagged
@@ -86,7 +86,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &2087753418775616489
+--- !u!114 &585381958492203597
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -95,13 +95,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 524150851634039762}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 06cd387802364cd49815bce360cb4d57, type: 3}
+  m_Script: {fileID: 11500000, guid: f85d0454fb692ff4fba09db6c4393b37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   hex:
     q: 0
     r: 0
     parent: {fileID: 0}
+  Image: {fileID: 5524995425473468485}
+  currentNodeMatVisual: {fileID: 0}
+  currentAttachedMatButton: {fileID: 0}
 --- !u!1 &8303024995683319075
 GameObject:
   m_ObjectHideFlags: 0
