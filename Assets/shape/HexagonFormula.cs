@@ -7,7 +7,7 @@ using UnityEngine;
 public class HexagonFormula : ScriptableObject
 {
 	public List<FormulaNode> formulaNodes;
-	[SerializeReference] public Effect effect;
+	public Effect effect;
 
 	public void Activate(Vector2Int origin)
 	{

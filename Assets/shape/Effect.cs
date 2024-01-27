@@ -1,18 +1,20 @@
 ﻿
 
+using System;
+
+[Serializable]
 public class Effect
 {
 	public string Text;
-	public int LevelId;
+	public int PotencyAdd;
+	public ResistanceTypes ResistancesPenetrated;
 }
 
-public class MatIncreaseEffect : Effect
+[Flags]
+public enum ResistanceTypes
 {
-	public MatType TargetMatType;
-	public int Increment = 1;
-}
-
-public class GunUnlockEffect : Effect
-{
-	public int GunIndex = 1;
+	None = 0,
+	ThickSkin = 1,
+	ColdSkin = 2,
+	HotSkin = 4,
 }
