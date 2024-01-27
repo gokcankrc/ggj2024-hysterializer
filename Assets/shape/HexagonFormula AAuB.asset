@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d96e9f9a78c771142a195e01d7ed461b, type: 3}
-  m_Name: HexagonFormula AA
+  m_Name: HexagonFormula AAuB
   m_EditorClassIdentifier: 
   formulaNodes:
   - hexLocation:
@@ -19,10 +19,15 @@ MonoBehaviour:
       parent: {fileID: 0}
     TargetMat: {fileID: 11400000, guid: c4d64fa3e934653418d49a5feebeb1ae, type: 2}
   - hexLocation:
+      q: 0
+      r: 1
+      parent: {fileID: 0}
+    TargetMat: {fileID: 11400000, guid: c4d64fa3e934653418d49a5feebeb1ae, type: 2}
+  - hexLocation:
       q: 1
       r: 0
       parent: {fileID: 0}
-    TargetMat: {fileID: 11400000, guid: c4d64fa3e934653418d49a5feebeb1ae, type: 2}
+    TargetMat: {fileID: 11400000, guid: 879a2ba46bb8b1c44ab09b1c104bfbf9, type: 2}
   effect:
     rid: -2
   references:

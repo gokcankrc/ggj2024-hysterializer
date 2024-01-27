@@ -7,7 +7,7 @@ using UnityEngine;
 [Serializable]
 public class FormulaNode
 {
-	public Vector2Int hexLocation;
+	public HexVector hexLocation;
 	public int MatIndex => TargetMat.Index;
 	public MatData TargetMat;
 }

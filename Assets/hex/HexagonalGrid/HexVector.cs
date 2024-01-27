@@ -22,8 +22,8 @@ public struct HexVector
 	public HexNode parent;
 
 
-	public int X => q;
-	public int Y => r / 2;
+	public int X => q + r / 2;
+	public int Y => r;
 
 	// From SE in ccw direction
 	public static HexVector[] NeighborDirections { get; } =
@@ -31,8 +31,7 @@ public struct HexVector
 		new HexVector(1, -1), new HexVector(1, 0), new HexVector(0, 1),
 		new HexVector(-1, 1), new HexVector(-1, 0), new HexVector(0, -1)
 	};
-
-
+	[Sirenix.OdinInspector.ShowInInspector] public Vector2Int Vector2int => new Vector2Int(X, Y);
 	public static float XScale = 40;
 	public static float YScale = 40;
 
@@ -82,7 +81,7 @@ public struct HexVector
 	public Vector2 GetRelativePosition()
 	{
 		float[][] matrix = HexTransform.Transform;
-		
+
 		float x = matrix[0][0] * q + matrix[1][0] * r;
 		float y = matrix[0][1] * q + matrix[1][1] * r;
 		x *= XScale;

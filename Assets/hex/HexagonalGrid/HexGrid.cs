@@ -14,16 +14,12 @@ namespace HexagonalGrid
 		[SerializeField] private float GridScale;
 
 		public static HexNode[,] Grid;
+		public static List<HexNode> SocketNodes;
 
-		public static HexGrid I => _i;
-		private static HexGrid _i;
-
-		private void Awake()
+		protected override void Awake()
 		{
-			if (_i != null && _i != this)
-				Destroy(this.gameObject);
-			else
-				_i = this;
+			base.Awake();
+			SocketNodes = new List<HexNode>();
 		}
 
 		private void Start()
@@ -52,6 +48,7 @@ namespace HexagonalGrid
 				Debug.Log(($"socket loc: {loc}"));
 				Destroy(Grid[loc.x, loc.y].gameObject);
 				Grid[loc.x, loc.y] = CreateSocketTile(loc.x, loc.y);
+				SocketNodes.Add(Grid[loc.x, loc.y]);
 			}
 		}
 
