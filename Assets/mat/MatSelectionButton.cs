@@ -12,8 +12,10 @@ public class MatSelectionButton : MonoBehaviour, IPointerDownHandler, IPointerUp
 	[SerializeField] Color EnabledColor;
 	[SerializeField] Color SelectedColor;
 	[SerializeField] Color DisabledColor;
+	[SerializeField] Color DisabledAndSelectedColor;
 	[SerializeField] Color PressingColor;
-	public bool CanBeClicked = true;
+	public int CurrentResource => LevelResourcesManager.I.matCurrent[index];
+	public bool HasResource = true;
 	public bool isSelected = false;
 
 	public int index => MatData.Index;
@@ -31,18 +33,15 @@ public class MatSelectionButton : MonoBehaviour, IPointerDownHandler, IPointerUp
 
 	public void OnPointerUp(PointerEventData eventData)
 	{
-		if (CanBeClicked)
-		{
-			if (!isSelected)
-				Select();
-			else
-				Deselect();
-		}
+		if (!isSelected)
+			Select();
+		else
+			Deselect();
 	}
 
 	public void OnPointerDown(PointerEventData eventData)
 	{
-		if (CanBeClicked)
+		if (HasResource)
 			SetColor(PressingColor);
 	}
 
@@ -76,20 +75,19 @@ public class MatSelectionButton : MonoBehaviour, IPointerDownHandler, IPointerUp
 
 	public void RefreshState()
 	{
-		var current = LevelResourcesManager.I.matCurrent[index];
-		CanBeClicked = current > 0;
+		var current = CurrentResource;
+		HasResource = current > 0;
 
 		text.text = current.ToString();
 
-		if (!CanBeClicked)
-		{
+		if (!HasResource)
 			SetColor(DisabledColor);
-			Deselect();
-		}
 		else if (isSelected)
 			SetColor(SelectedColor);
 		else
 			SetColor(EnabledColor);
+		if (!HasResource && isSelected)
+			SetColor(DisabledAndSelectedColor);
 	}
 
 	private void SetColor(Color c)

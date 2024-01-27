@@ -29,6 +29,7 @@ public class MatSelectionManager : Singleton<MatSelectionManager>
 	private void AttachMatToNode(HexNode hexNode, MatSelectionButton selection)
 	{
 		hexNode.DetachMat();
+		if (selection.CurrentResource == 0) return;
 		hexNode.AttachMat(selection);
 	}
 }

@@ -65,8 +65,9 @@ MonoBehaviour:
   EnabledColor: {r: 0.8113208, g: 0.8113208, b: 0.8113208, a: 1}
   SelectedColor: {r: 1, g: 1, b: 1, a: 1}
   DisabledColor: {r: 0.7169812, g: 0.38892847, b: 0.38892847, a: 1}
+  DisabledAndSelectedColor: {r: 1, g: 0.23113209, b: 0.23113209, a: 1}
   PressingColor: {r: 0.5566038, g: 0.5566038, b: 0.5566038, a: 1}
-  CanBeClicked: 1
+  HasResource: 1
   isSelected: 0
 --- !u!1 &7477977363174140875
 GameObject:
