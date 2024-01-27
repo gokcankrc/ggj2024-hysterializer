@@ -11,10 +11,11 @@ public class HexNode : MonoBehaviour, IPointerClickHandler
 	public Image Image;
 	public NodeMatVisual currentNodeMatVisual;
 	public MatSelectionButton currentAttachedMatButton;
+	public int CurrentAttachedIndex = -1;
 
 	public void OnPointerClick(PointerEventData eventData)
 	{
-		MatSelectionManager.I.HexNodeHasBeenSelected(this);
+		MatSelectionManager.I.HexNodeHasBeenSelected(this, CurrentAttachedIndex);
 	}
 
 	public void AttachMat(MatSelectionButton selectedMatButton)
@@ -25,15 +26,21 @@ public class HexNode : MonoBehaviour, IPointerClickHandler
 			DetachMat();
 		}
 		currentAttachedMatButton = selectedMatButton;
-		var attachedMat = Instantiate(selectedMatButton.MatData.NodeMatVisual, transform.position, Quaternion.identity, transform);
+		currentNodeMatVisual = Instantiate(selectedMatButton.MatData.NodeMatVisual, transform.position, Quaternion.identity, transform);
+		CurrentAttachedIndex = selectedMatButton.MatData.Index;
+
 		currentAttachedMatButton.AvailableDown();
 	}
 
 	public void DetachMat()
 	{
-		if (currentNodeMatVisual != null)
+		if (currentNodeMatVisual == null)
 			return;
 		currentAttachedMatButton.AvailableUp();
 		Destroy(currentNodeMatVisual.gameObject);
+
+		currentAttachedMatButton = null;
+		currentNodeMatVisual = null;
+		CurrentAttachedIndex = -1;
 	}
 }

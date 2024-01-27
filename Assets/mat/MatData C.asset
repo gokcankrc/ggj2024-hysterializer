@@ -14,5 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Mat: {fileID: 5239944701696715144, guid: 37206ccfc92efa347bd0ba0f5d60ef3c, type: 3}
   NodeMatVisual: {fileID: 2674452630597794902, guid: 9043c56eed411d34b915adb2e5455256, type: 3}
+  MatSelectionButton: {fileID: 2762022619402281033, guid: 970a0a95d64cf0348b1a3890e2596a3d, type: 3}
   Index: 2
   MatType: 2

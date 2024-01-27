@@ -105,6 +105,7 @@ MonoBehaviour:
   Image: {fileID: 5524995425473468485}
   currentNodeMatVisual: {fileID: 0}
   currentAttachedMatButton: {fileID: 0}
+  CurrentAttachedIndex: -1
 --- !u!1 &8303024995683319075
 GameObject:
   m_ObjectHideFlags: 0

@@ -13,10 +13,17 @@ public class MatSelectionManager : Singleton<MatSelectionManager>
 		CurrentlySelectedMatButton = matSelectionButton;
 	}
 
-	public void HexNodeHasBeenSelected(HexNode hexNode)
+	public void HexNodeHasBeenSelected(HexNode hexNode, int matIndex)
 	{
-		if (CurrentlySelectedMatButton = null) return;
-		AttachMatToNode(hexNode, CurrentlySelectedMatButton);
+		if (CurrentlySelectedMatButton == null) return;
+		if (hexNode.CurrentAttachedIndex != CurrentlySelectedMatButton.index)
+		{
+			AttachMatToNode(hexNode, CurrentlySelectedMatButton);
+		}
+		else
+		{
+			hexNode.DetachMat();
+		}
 	}
 
 	private void AttachMatToNode(HexNode hexNode, MatSelectionButton selection)

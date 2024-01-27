@@ -1,29 +1,43 @@
 using System;
+using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public class MatSelectionButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 {
-	[SerializeField] public Mat Mat;
+	public MatData MatData;
+	[SerializeField] public TMP_Text text;
 	[SerializeField] Image image;
 	[SerializeField] Color EnabledColor;
 	[SerializeField] Color SelectedColor;
 	[SerializeField] Color DisabledColor;
 	[SerializeField] Color PressingColor;
 	public bool CanBeClicked = true;
-	public bool isSelected = true;
-	public MatData MatData;
+	public bool isSelected = false;
+
+	public int index => MatData.Index;
+
+	private void Awake()
+	{
+		LevelResourcesManager.ResourcesRefresh += RefreshState;
+	}
 
 	private void Start()
 	{
-		RefreshVisuals();
+		isSelected = false;
+		RefreshState();
 	}
 
 	public void OnPointerUp(PointerEventData eventData)
 	{
 		if (CanBeClicked)
-			Select();
+		{
+			if (!isSelected)
+				Select();
+			else
+				Deselect();
+		}
 	}
 
 	public void OnPointerDown(PointerEventData eventData)
@@ -37,28 +51,42 @@ public class MatSelectionButton : MonoBehaviour, IPointerDownHandler, IPointerUp
 		Debug.Log("clicked");
 		isSelected = true;
 		MatSelectionManager.I.MatHasBeenSelected(this);
-		RefreshVisuals();
+		RefreshState();
 	}
 
 	public void Deselect()
 	{
+		if (this != MatSelectionManager.I.CurrentlySelectedMatButton) return;
+
+		MatSelectionManager.I.CurrentlySelectedMatButton = null;
 		isSelected = false;
-		RefreshVisuals();
+		RefreshState();
 	}
+
 	public void AvailableUp()
 	{
-		throw new NotImplementedException();
+		LevelResourcesManager.I.matCurrent[index] += 1;
+		RefreshState();
 	}
 
 	public void AvailableDown()
 	{
-		throw new NotImplementedException();
+		LevelResourcesManager.I.matCurrent[index] -= 1;
+		RefreshState();
 	}
 
-	public void RefreshVisuals()
+	public void RefreshState()
 	{
+		var current = LevelResourcesManager.I.matCurrent[index];
+		CanBeClicked = current > 0;
+
+		text.text = current.ToString();
+
 		if (!CanBeClicked)
+		{
 			SetColor(DisabledColor);
+			Deselect();
+		}
 		else if (isSelected)
 			SetColor(SelectedColor);
 		else

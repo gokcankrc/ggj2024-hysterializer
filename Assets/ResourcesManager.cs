@@ -7,6 +7,7 @@ public class ResourcesManager : Singleton<ResourcesManager>
 {
 	public const int MatLength = 4;
 	public int[] matMax = new int[MatLength];
+	public int[] matDefaults = new int[MatLength];
 
 	private void Start()
 	{
@@ -16,7 +17,8 @@ public class ResourcesManager : Singleton<ResourcesManager>
 	public void Load()
 	{
 		for (int i = 0; i < MatLength; i++)
-			matMax[i] = PlayerPrefs.GetInt($"Mat{i}Max");
+			matMax[i] = PlayerPrefs.GetInt($"Mat{i}Max") + matDefaults[i];
+		
 		PlayerPrefs.Save();
 	}
 	public void Save()

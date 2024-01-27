@@ -5,6 +5,7 @@ public class MatData : ScriptableObject
 {
 	public Mat Mat;
 	public NodeMatVisual NodeMatVisual;
+	public MatSelectionButton MatSelectionButton;
 	public int Index;
 	public MatType MatType;
 }
