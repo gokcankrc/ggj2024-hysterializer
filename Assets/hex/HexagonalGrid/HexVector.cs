@@ -37,8 +37,8 @@ public struct HexVector
 	};
 
 
-	public static float XScale = 1;
-	public static float YScale = 1;
+	public static float XScale = 40;
+	public static float YScale = 40;
 
 	public static Vector3 Origin = Vector3.zero;
 

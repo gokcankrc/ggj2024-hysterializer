@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.UIElements;
 using Random = UnityEngine.Random;
 
 namespace HexagonalGrid
@@ -11,6 +12,7 @@ namespace HexagonalGrid
 	{
 		[SerializeField] private Vector2Int gridSize = new Vector2Int(8, 9);
 		[SerializeField] private HexTile tileObject;
+		[SerializeField] private float GridScale;
 
 		public static HexTile[,] Grid;
 		public static List<HexTile> MarkedTiles = new List<HexTile>();
@@ -25,12 +27,17 @@ namespace HexagonalGrid
 				Destroy(this.gameObject);
 			else
 				_i = this;
+		}
 
+		private void Start()
+		{
 			FillGrid();
 		}
 
 		public void FillGrid()
 		{
+			HexVector.XScale = GridScale;
+			HexVector.YScale = GridScale;
 			ClearGrid();
 			Grid = new HexTile[gridSize.x, gridSize.y];
 			HexVector.Origin = transform.position;
