@@ -48,7 +48,6 @@ public class MatSelectionButton : MonoBehaviour, IPointerDownHandler, IPointerUp
 
 	public void Select()
 	{
-		Debug.Log("clicked");
 		isSelected = true;
 		MatSelectionManager.I.MatHasBeenSelected(this);
 		RefreshState();

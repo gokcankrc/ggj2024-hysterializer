@@ -13,7 +13,7 @@ public class HexNode : MonoBehaviour, IPointerClickHandler
 	public MatSelectionButton currentAttachedMatButton;
 	public int CurrentAttachedIndex = -1;
 
-	public void OnPointerClick(PointerEventData eventData)
+	public virtual void OnPointerClick(PointerEventData eventData)
 	{
 		MatSelectionManager.I.HexNodeHasBeenSelected(this, CurrentAttachedIndex);
 	}
