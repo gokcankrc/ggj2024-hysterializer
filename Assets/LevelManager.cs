@@ -30,6 +30,8 @@ public class LevelManager : Singleton<LevelManager>
 		// Make portrey of candidate on the face
 
 		GameManager.I.SwitchToGun();
+		foreach (Transform child in GunVisualParent)
+			Destroy(child.gameObject);
 
 		HexGrid.I.FillGrid();
 		HexagonSockets gun = Guns[ResourcesManager.I.GunLevel];

@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f34602f96e0072f42983ada1b285009a, type: 3}
   m_Name: Gun 1 Sockets
   m_EditorClassIdentifier: 
+  GunVisual: {fileID: 8437010918879803008, guid: 6b02fac9d198e4248afa9fb7b8488639, type: 3}
+  GunVisualShift: {x: 0, y: 0}
   OriginShift: {x: 100, y: -30}
   hexLocations:
   - {x: 0, y: 0}
