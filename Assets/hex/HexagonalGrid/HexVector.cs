@@ -31,7 +31,7 @@ public struct HexVector
 		new HexVector(1, -1), new HexVector(1, 0), new HexVector(0, 1),
 		new HexVector(-1, 1), new HexVector(-1, 0), new HexVector(0, -1)
 	};
-	[Sirenix.OdinInspector.ShowInInspector] public Vector2Int Vector2int => new Vector2Int(X, Y);
+	public Vector2Int Vector2int => new Vector2Int(X, Y);
 	public static float XScale = 40;
 	public static float YScale = 40;
 

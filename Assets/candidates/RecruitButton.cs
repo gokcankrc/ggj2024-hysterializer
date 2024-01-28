@@ -1,14 +1,32 @@
 using HexagonalGrid;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class RecruitButton : MonoBehaviour
 {
-
 	public void RecruitInitiate()
 	{
-		// Get current stats
+		var Effect = new Effect();
+		CalculateEffect(Effect);
+		bool success = CompareEffect(Effect, LevelManager.I.Candidate.Requirements);
+		Debug.Log(LevelManager.I.Candidate.Requirements.PotencyAdd);
+		Debug.Log(Effect.PotencyAdd);
+		if (success)
+		{
+			Debug.Log("i didst it");
+			MapManager.I.SelectedMap.Finish();
+			GameManager.I.SwitchToMap();
+		}
+		else
+		{
+			Debug.Log("i dieded");
+		}
+	}
+
+	private static void CalculateEffect(Effect Effect)
+	{
 		var formulas = FormulaManager.I._formulas;
 		foreach (var formula in formulas)
 		{
@@ -32,8 +50,15 @@ public class RecruitButton : MonoBehaviour
 				}
 
 				if (thereIsFormula)
-					formula.Activate(origin);
+					formula.Activate(origin, Effect);
 			}
 		}
+	}
+
+	private static bool CompareEffect(Effect effect, Effect requirements)
+	{
+		bool success = (requirements.ResistancesPenetrated & ~effect.ResistancesPenetrated) == ResistanceTypes.None;
+		success &= effect.PotencyAdd >= requirements.PotencyAdd;
+		return success;
 	}
 }

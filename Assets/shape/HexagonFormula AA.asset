@@ -24,9 +24,6 @@ MonoBehaviour:
       parent: {fileID: 0}
     TargetMat: {fileID: 11400000, guid: c4d64fa3e934653418d49a5feebeb1ae, type: 2}
   effect:
-    rid: -2
-  references:
-    version: 2
-    RefIds:
-    - rid: -2
-      type: {class: , ns: , asm: }
+    Text: 
+    PotencyAdd: 5
+    ResistancesPenetrated: 0

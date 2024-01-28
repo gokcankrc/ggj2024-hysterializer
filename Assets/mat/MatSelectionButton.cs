@@ -14,7 +14,7 @@ public class MatSelectionButton : MonoBehaviour, IPointerDownHandler, IPointerUp
 	[SerializeField] Color DisabledColor;
 	[SerializeField] Color DisabledAndSelectedColor;
 	[SerializeField] Color PressingColor;
-	public int CurrentResource => LevelResourcesManager.I.matCurrent[index];
+	public int CurrentResource => LevelManager.I.matCurrent[index];
 	public bool HasResource = true;
 	public bool isSelected = false;
 
@@ -22,7 +22,7 @@ public class MatSelectionButton : MonoBehaviour, IPointerDownHandler, IPointerUp
 
 	private void Awake()
 	{
-		LevelResourcesManager.ResourcesRefresh += RefreshState;
+		LevelManager.ResourcesRefresh += RefreshState;
 	}
 
 	private void Start()
@@ -63,13 +63,13 @@ public class MatSelectionButton : MonoBehaviour, IPointerDownHandler, IPointerUp
 
 	public void AvailableUp()
 	{
-		LevelResourcesManager.I.matCurrent[index] += 1;
+		LevelManager.I.matCurrent[index] += 1;
 		RefreshState();
 	}
 
 	public void AvailableDown()
 	{
-		LevelResourcesManager.I.matCurrent[index] -= 1;
+		LevelManager.I.matCurrent[index] -= 1;
 		RefreshState();
 	}
 

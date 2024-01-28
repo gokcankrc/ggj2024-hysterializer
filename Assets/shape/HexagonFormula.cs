@@ -9,8 +9,9 @@ public class HexagonFormula : ScriptableObject
 	public List<FormulaNode> formulaNodes;
 	public Effect effect;
 
-	public void Activate(Vector2Int origin)
+	public void Activate(Vector2Int origin, Effect effectIn)
 	{
+		effectIn.Add(effect);
 		Debug.Log($"Activated! {name}");
 	}
 }

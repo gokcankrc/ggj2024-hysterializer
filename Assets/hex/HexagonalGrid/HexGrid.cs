@@ -22,11 +22,6 @@ namespace HexagonalGrid
 			SocketNodes = new List<HexNode>();
 		}
 
-		private void Start()
-		{
-			FillGrid();
-		}
-
 		public void FillGrid()
 		{
 			HexVector.XScale = GridScale;
@@ -45,7 +40,6 @@ namespace HexagonalGrid
 			foreach (Vector2Int relativeLoc in socketShape.hexLocations)
 			{
 				var loc = origin + relativeLoc;
-				Debug.Log(($"socket loc: {loc}"));
 				Destroy(Grid[loc.x, loc.y].gameObject);
 				Grid[loc.x, loc.y] = CreateSocketTile(loc.x, loc.y);
 				SocketNodes.Add(Grid[loc.x, loc.y]);

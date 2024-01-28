@@ -5,9 +5,14 @@ using System;
 [Serializable]
 public class Effect
 {
-	public string Text;
 	public int PotencyAdd;
 	public ResistanceTypes ResistancesPenetrated;
+
+	public void Add(Effect effect)
+	{
+		PotencyAdd += effect.PotencyAdd;
+		ResistancesPenetrated |= effect.ResistancesPenetrated;
+	}
 }
 
 [Flags]

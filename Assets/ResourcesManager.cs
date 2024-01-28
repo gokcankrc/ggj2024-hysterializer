@@ -17,14 +17,15 @@ public class ResourcesManager : Singleton<ResourcesManager>
 	public void Load()
 	{
 		for (int i = 0; i < MatLength; i++)
-			matMax[i] = PlayerPrefs.GetInt($"Mat{i}Max") + matDefaults[i];
-		
+			MapManager.I.AllMaps[i].TryLoad(i);
+
 		PlayerPrefs.Save();
 	}
 	public void Save()
 	{
 		for (int i = 0; i < MatLength; i++)
-			PlayerPrefs.SetInt($"Mat{i}Max", matMax[i]);
+			MapManager.I.AllMaps[i].TrySave(i);
+
 		PlayerPrefs.Save();
 	}
 }
