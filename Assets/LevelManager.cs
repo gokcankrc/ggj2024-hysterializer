@@ -37,6 +37,7 @@ public class LevelManager : Singleton<LevelManager>
 		HexagonSockets gun = Guns[MapManager.I.SelectedGunID];
 		HexVector.XScale = gun.ScaleOverride;
 		HexVector.YScale = gun.ScaleOverride;
+		EnemyDescriptionHandler.I.SetEnemy(map.Candidate);
 
 		HexGrid.I.FillGrid();
 		HexGrid.I.PlaceSocketsInGrid(gun);

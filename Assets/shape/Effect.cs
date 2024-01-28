@@ -29,6 +29,11 @@ public class Effect
 			text += $"{resistance}";
 		return text;
 	}
+
+	public virtual int GetPotency()
+	{
+		return PotencyAdd;
+	}
 }
 
 [Flags]

@@ -14,4 +14,9 @@ public class HexagonFormula : ScriptableObject
 		effectIn.Add(effect);
 		Debug.Log($"Activated! {name}");
 	}
+
+	public int GetPotency()
+	{
+		return effect.GetPotency();
+	}
 }

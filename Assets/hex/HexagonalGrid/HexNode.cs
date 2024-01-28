@@ -30,6 +30,7 @@ public class HexNode : MonoBehaviour, IPointerClickHandler
 		SoundManager.Play(audioClip);
 
 		currentAttachedMatButton.AvailableDown();
+		EnemyDescriptionHandler.I.RefreshVisuals();
 	}
 
 	public void DetachMat()
@@ -42,5 +43,6 @@ public class HexNode : MonoBehaviour, IPointerClickHandler
 		currentAttachedMatButton = null;
 		currentNodeMatVisual = null;
 		CurrentAttachedIndex = -1;
+		EnemyDescriptionHandler.I.RefreshVisuals();
 	}
 }
