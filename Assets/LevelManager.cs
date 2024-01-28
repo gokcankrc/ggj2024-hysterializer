@@ -60,5 +60,6 @@ public class LevelManager : Singleton<LevelManager>
 	{
 		var a = PortraitHandler.I.image;
 		a.sprite = Candidate.PortraitLaugh;
+		SoundManager.Play(Candidate.LaughAudioClip);
 	}
 }

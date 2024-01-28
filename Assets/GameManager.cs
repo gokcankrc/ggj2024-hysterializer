@@ -18,6 +18,7 @@ public class GameManager : Singleton<GameManager>
 
 	public void SwitchToMap()
 	{
+		if (RecruitButton.IsBusy) return;
 		GunParent.SetActive(false);
 		MapParent.SetActive(true);
 		ScreenTransitionDone?.Invoke();
