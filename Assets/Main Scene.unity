@@ -541,7 +541,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'There are many formulas. Do a very optimized layoutamterial '
+  m_text: Try to recreate formulas to match the requirements of your next employee.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5b460394784040e4bb54a5e38808cdde, type: 2}
   m_sharedMaterial: {fileID: -8931000358975125713, guid: 5b460394784040e4bb54a5e38808cdde, type: 2}
@@ -3477,25 +3477,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'This is a letter
-
-    This is a letter
-
-    This is a letter
-
-    This
-    is a letter
-
-    This is a letterThis is a letter
-
-    This is a letter
-
-    This
-    is a letter
-
-    This is a letter
-
-'
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5b460394784040e4bb54a5e38808cdde, type: 2}
   m_sharedMaterial: {fileID: -8931000358975125713, guid: 5b460394784040e4bb54a5e38808cdde, type: 2}
