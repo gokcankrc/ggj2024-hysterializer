@@ -17,4 +17,4 @@ MonoBehaviour:
   Requirements:
     PotencyAdd: 10
     ResistancesPenetrated: 1
-  LaughAudioClip: {fileID: 0}
+  LaughAudioClip: {fileID: 8300000, guid: 407c7866d6fdf704ba4f6ee3fd4e555a, type: 3}
