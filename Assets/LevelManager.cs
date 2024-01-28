@@ -34,7 +34,7 @@ public class LevelManager : Singleton<LevelManager>
 			Destroy(child.gameObject);
 
 		HexGrid.I.FillGrid();
-		HexagonSockets gun = Guns[ResourcesManager.I.GunLevel];
+		HexagonSockets gun = Guns[MapManager.I.SelectedGunID];
 		HexGrid.I.PlaceSocketsInGrid(gun);
 		var tr = HexGrid.I.transform;
 		tr.localPosition = gun.OriginShift;

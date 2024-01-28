@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Gun 2 Sockets
   m_EditorClassIdentifier: 
   GunVisual: {fileID: 8437010918879803008, guid: 5569b17ab2e23b0459fee22ef92e58e3, type: 3}
-  GunVisualShift: {x: 0, y: 0}
+  GunVisualShift: {x: 558.5, y: 0}
   OriginShift: {x: 100, y: -30}
   hexLocations:
   - {x: 0, y: 0}
@@ -21,8 +21,3 @@ MonoBehaviour:
   - {x: 2, y: 0}
   - {x: 3, y: 0}
   - {x: 4, y: 0}
-  - {x: 0, y: 1}
-  - {x: 3, y: 1}
-  - {x: 4, y: 1}
-  - {x: 5, y: 1}
-  - {x: 4, y: 2}
