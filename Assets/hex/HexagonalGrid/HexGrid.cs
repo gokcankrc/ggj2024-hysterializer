@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace HexagonalGrid
 {
@@ -34,9 +35,9 @@ namespace HexagonalGrid
 					Grid[i, j] = CreateEmptyTile(i, j);
 		}
 
-		public void PlaceSocketsInGrid(HexagonSockets socketShape)
+		public void PlaceSocketsInGrid(HexagonSockets socketShape)	
 		{
-			var origin = new Vector2Int(0, 3);
+			var origin = new Vector2Int(0, 2);
 			foreach (Vector2Int relativeLoc in socketShape.hexLocations)
 			{
 				var loc = origin + relativeLoc;

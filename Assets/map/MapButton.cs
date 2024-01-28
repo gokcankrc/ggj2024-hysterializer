@@ -41,6 +41,9 @@ public class MapButton : MonoBehaviour, IPointerClickHandler
 			map.IsUnlocked = true;
 			map.RefreshVisuals();
 		}
+		foreach (var upgrade in Upgrades)
+			upgrade.Activate();
+
 		RefreshVisuals();
 	}
 

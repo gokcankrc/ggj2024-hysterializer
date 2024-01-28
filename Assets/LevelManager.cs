@@ -2,13 +2,14 @@ using RegularDuck._Core.Helpers;
 using System;
 using HexagonalGrid;
 using UnityEngine;
+using System.Collections.Generic;
 
 public class LevelManager : Singleton<LevelManager>
 {
 	public static int MatLength => ResourcesManager.MatLength;
 	public static Action ResourcesRefresh;
 	public int[] matCurrent = new int[MatLength];
-	public HexagonSockets temporarySocktTarget;
+	public List<HexagonSockets> Guns;
 	public Being Candidate;
 
 	private void Start()
@@ -29,11 +30,9 @@ public class LevelManager : Singleton<LevelManager>
 		GameManager.I.SwitchToGun();
 
 		HexGrid.I.FillGrid();
-		HexGrid.I.PlaceSocketsInGrid(temporarySocktTarget);
-	}
-
-	public void ShootGun()
-	{
+		HexGrid.I.PlaceSocketsInGrid(Guns[ResourcesManager.I.GunLevel]);
+		var tr = HexGrid.I.transform;
+		tr.localPosition = Guns[ResourcesManager.I.GunLevel].OriginShift;
 	}
 
 	private void GetCurrentMaxResources()

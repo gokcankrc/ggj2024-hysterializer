@@ -9,6 +9,12 @@ public class GameManager : Singleton<GameManager>
 	public GameObject GunParent;
 	public GameObject MapParent;
 
+	protected override void Awake()
+	{
+		base.Awake();
+		SwitchToMap();
+	}
+
 	public void SwitchToMap()
 	{
 		GunParent.SetActive(false);

@@ -13,17 +13,9 @@ PrefabInstance:
       value: Node Mat Root A Variant
       objectReference: {fileID: 0}
     - target: {fileID: 4633215958640257896, guid: 2c1470d1c7e3e9e45b8a9d616a896f4a, type: 3}
-      propertyPath: m_Color.b
-      value: 0.13679248
-      objectReference: {fileID: 0}
-    - target: {fileID: 4633215958640257896, guid: 2c1470d1c7e3e9e45b8a9d616a896f4a, type: 3}
-      propertyPath: m_Color.g
-      value: 0.13679248
-      objectReference: {fileID: 0}
-    - target: {fileID: 4633215958640257896, guid: 2c1470d1c7e3e9e45b8a9d616a896f4a, type: 3}
-      propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 21639f7412e71d64c84f76efee91fbfe, type: 3}
     - target: {fileID: 4872561124891602491, guid: 2c1470d1c7e3e9e45b8a9d616a896f4a, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -103,6 +95,30 @@ PrefabInstance:
     - target: {fileID: 4872561124891602491, guid: 2c1470d1c7e3e9e45b8a9d616a896f4a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5201765946603238324, guid: 2c1470d1c7e3e9e45b8a9d616a896f4a, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 178
+      objectReference: {fileID: 0}
+    - target: {fileID: 5201765946603238324, guid: 2c1470d1c7e3e9e45b8a9d616a896f4a, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 182
+      objectReference: {fileID: 0}
+    - target: {fileID: 5201765946603238324, guid: 2c1470d1c7e3e9e45b8a9d616a896f4a, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.24
+      objectReference: {fileID: 0}
+    - target: {fileID: 5201765946603238324, guid: 2c1470d1c7e3e9e45b8a9d616a896f4a, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.24
+      objectReference: {fileID: 0}
+    - target: {fileID: 5201765946603238324, guid: 2c1470d1c7e3e9e45b8a9d616a896f4a, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.24
+      objectReference: {fileID: 0}
+    - target: {fileID: 5201765946603238324, guid: 2c1470d1c7e3e9e45b8a9d616a896f4a, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7085471583545078418, guid: 2c1470d1c7e3e9e45b8a9d616a896f4a, type: 3}
       propertyPath: m_Color.b

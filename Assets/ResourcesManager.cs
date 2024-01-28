@@ -8,6 +8,7 @@ public class ResourcesManager : Singleton<ResourcesManager>
 	public const int MatLength = 4;
 	public int[] matMax = new int[MatLength];
 	public int[] matDefaults = new int[MatLength];
+	public int GunLevel;
 
 	private void Start()
 	{

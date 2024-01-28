@@ -11,17 +11,13 @@ public class RecruitButton : MonoBehaviour
 		var Effect = new Effect();
 		CalculateEffect(Effect);
 		bool success = CompareEffect(Effect, LevelManager.I.Candidate.Requirements);
-		Debug.Log(LevelManager.I.Candidate.Requirements.PotencyAdd);
-		Debug.Log(Effect.PotencyAdd);
 		if (success)
 		{
-			Debug.Log("i didst it");
 			MapManager.I.SelectedMap.Finish();
 			GameManager.I.SwitchToMap();
 		}
 		else
 		{
-			Debug.Log("i dieded");
 		}
 	}
 

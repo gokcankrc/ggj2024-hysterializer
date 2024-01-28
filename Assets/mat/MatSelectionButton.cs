@@ -49,6 +49,7 @@ public class MatSelectionButton : MonoBehaviour, IPointerDownHandler, IPointerUp
 	{
 		isSelected = true;
 		MatSelectionManager.I.MatHasBeenSelected(this);
+		transform.localScale = Vector3.one * 1.12f;
 		RefreshState();
 	}
 
@@ -58,6 +59,7 @@ public class MatSelectionButton : MonoBehaviour, IPointerDownHandler, IPointerUp
 
 		MatSelectionManager.I.CurrentlySelectedMatButton = null;
 		isSelected = false;
+		transform.localScale = Vector3.one * 1.0f;
 		RefreshState();
 	}
 
@@ -78,7 +80,7 @@ public class MatSelectionButton : MonoBehaviour, IPointerDownHandler, IPointerUp
 		var current = CurrentResource;
 		HasResource = current > 0;
 
-		text.text = current.ToString();
+		text.text = current.ToString() + "x";
 
 		if (!HasResource)
 			SetColor(DisabledColor);
