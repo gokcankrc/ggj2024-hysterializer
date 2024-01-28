@@ -543,7 +543,7 @@ MonoBehaviour:
 
     There are many formulas. Do a very optimized layoutamterial '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 86c1d3575848e2b428b3334051cc421c, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 5b460394784040e4bb54a5e38808cdde, type: 2}
   m_sharedMaterial: {fileID: -2148168781476234420, guid: 86c1d3575848e2b428b3334051cc421c, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -607,7 +607,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &175765665
@@ -814,8 +814,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Back
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 86c1d3575848e2b428b3334051cc421c, type: 2}
-  m_sharedMaterial: {fileID: -2148168781476234420, guid: 86c1d3575848e2b428b3334051cc421c, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 5b460394784040e4bb54a5e38808cdde, type: 2}
+  m_sharedMaterial: {fileID: -8931000358975125713, guid: 5b460394784040e4bb54a5e38808cdde, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2817,7 +2817,7 @@ MonoBehaviour:
 
 '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 86c1d3575848e2b428b3334051cc421c, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 5b460394784040e4bb54a5e38808cdde, type: 2}
   m_sharedMaterial: {fileID: -2148168781476234420, guid: 86c1d3575848e2b428b3334051cc421c, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -2881,7 +2881,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1138507081
@@ -2962,8 +2962,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Recruit
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 86c1d3575848e2b428b3334051cc421c, type: 2}
-  m_sharedMaterial: {fileID: -2148168781476234420, guid: 86c1d3575848e2b428b3334051cc421c, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 5b460394784040e4bb54a5e38808cdde, type: 2}
+  m_sharedMaterial: {fileID: -8931000358975125713, guid: 5b460394784040e4bb54a5e38808cdde, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3829,7 +3829,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: "Credits:\nG\xF6kcan KIRCA\nEge \xD6ZTEKE\nOzan OZVATAN\t\n"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 86c1d3575848e2b428b3334051cc421c, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 5b460394784040e4bb54a5e38808cdde, type: 2}
   m_sharedMaterial: {fileID: -2148168781476234420, guid: 86c1d3575848e2b428b3334051cc421c, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -3893,7 +3893,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1660170553
