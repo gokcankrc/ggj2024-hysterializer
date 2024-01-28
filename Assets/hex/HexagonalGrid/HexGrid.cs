@@ -63,14 +63,14 @@ namespace HexagonalGrid
 
 		public HexNode CreateSocketTile(int x, int y)
 		{
-			var hexTile = PrefabUtility.InstantiatePrefab(tileObject, transform) as HexNode;
+			var hexTile = Instantiate(tileObject, transform) as HexNode;
 			PositionTile(x, y, hexTile);
 			return hexTile;
 		}
 
 		public HexNode CreateEmptyTile(int x, int y)
 		{
-			var hexTile = PrefabUtility.InstantiatePrefab(emptyTileObject, transform) as HexNode;
+			var hexTile = Instantiate(emptyTileObject, transform) as HexNode;
 			PositionTile(x, y, hexTile);
 			return hexTile;
 		}
