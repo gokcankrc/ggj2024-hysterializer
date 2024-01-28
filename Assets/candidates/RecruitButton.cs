@@ -6,6 +6,11 @@ using UnityEngine;
 
 public class RecruitButton : MonoBehaviour
 {
+	public static bool IsBusy = false;
+	public AudioClip DartShootSoundEffect;
+
+
+
 	public void RecruitInitiate()
 	{
 		var Effect = new Effect();
@@ -13,11 +18,28 @@ public class RecruitButton : MonoBehaviour
 		bool success = CompareEffect(Effect, LevelManager.I.Candidate.Requirements);
 		if (success)
 		{
-			MapManager.I.SelectedMap.Finish();
-			GameManager.I.SwitchToMap();
+			if (IsBusy) return;
+
+			IsBusy = true;
+			StartCoroutine(delayedAction());
+
 		}
 		else
 		{
+		}
+
+		IEnumerator delayedAction()
+		{
+			//shoot dart
+			SoundManager.Play(DartShootSoundEffect);
+			yield return new WaitForSeconds(2);
+			//show portrait
+			LevelManager.I.SetLaughingPortrait();
+			yield return new WaitForSeconds(2);
+			// Return
+			IsBusy = false;
+			MapManager.I.SelectedMap.Finish();
+			GameManager.I.SwitchToMap();
 		}
 	}
 

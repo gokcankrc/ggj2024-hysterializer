@@ -19,6 +19,7 @@ public class SoundManager : Singleton<SoundManager>
 
 	public void PlaySound(AudioClip clip)
 	{
+		if (clip == null) return;
 		var newSource = Instantiate(sourcePrefab, transform);
 		newSource.clip = clip;
 		// newSource.volume = Volume;

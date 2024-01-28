@@ -4945,6 +4945,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f745e9eec475b143a5da3c2579179f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DartShootSoundEffect: {fileID: 8300000, guid: 9001f70f55ef19840aca42e8bfa0dc23, type: 3}
 --- !u!114 &1643160851
 MonoBehaviour:
   m_ObjectHideFlags: 0
