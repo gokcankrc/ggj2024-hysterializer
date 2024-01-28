@@ -1,15 +1,18 @@
 using RegularDuck._Core.Helpers;
 using System;
+using UnityEngine;
 
 public class MatSelectionManager : Singleton<MatSelectionManager>
 {
 	public MatSelectionButton CurrentlySelectedMatButton;
+	public AudioClip Select;
 
 	public void MatHasBeenSelected(MatSelectionButton matSelectionButton)
 	{
 		Deselect();
 
 		CurrentlySelectedMatButton = matSelectionButton;
+		SoundManager.Play(Select);
 	}
 
 	public void HexNodeHasBeenSelected(HexNode hexNode, int matIndex)

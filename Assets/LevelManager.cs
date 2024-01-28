@@ -11,6 +11,7 @@ public class LevelManager : Singleton<LevelManager>
 	public int[] matCurrent = new int[MatLength];
 	public List<HexagonSockets> Guns;
 	public Being Candidate;
+	public Transform GunVisualParent;
 
 	private void Start()
 	{
@@ -31,9 +32,12 @@ public class LevelManager : Singleton<LevelManager>
 		GameManager.I.SwitchToGun();
 
 		HexGrid.I.FillGrid();
-		HexGrid.I.PlaceSocketsInGrid(Guns[ResourcesManager.I.GunLevel]);
+		HexagonSockets gun = Guns[ResourcesManager.I.GunLevel];
+		HexGrid.I.PlaceSocketsInGrid(gun);
 		var tr = HexGrid.I.transform;
-		tr.localPosition = Guns[ResourcesManager.I.GunLevel].OriginShift;
+		tr.localPosition = gun.OriginShift;
+		var a = Instantiate(gun.GunVisual, GunVisualParent);
+		gun.PlaceVisual(a.transform);
 	}
 
 	private void GetCurrentMaxResources()

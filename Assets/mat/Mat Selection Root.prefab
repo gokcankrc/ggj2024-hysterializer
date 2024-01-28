@@ -67,6 +67,7 @@ MonoBehaviour:
   DisabledColor: {r: 0.65, g: 0.65, b: 0.65, a: 1}
   DisabledAndSelectedColor: {r: 0.65, g: 0.65, b: 0.65, a: 1}
   PressingColor: {r: 0.85, g: 0.85, b: 0.85, a: 1}
+  DeselectClip: {fileID: 8300000, guid: 35c063adeb7a1264bb122032b9b87e16, type: 3}
   HasResource: 1
   isSelected: 0
 --- !u!1 &7477977363174140875

@@ -16,6 +16,6 @@ public class MatIncreaseUpgrade : Upgrade
 		var a = new string[] { "zero", "one", "two", "three" };
 
 
-		return $"Gives {a[Increment]} {TargetMatType}";
+		return $"Gives {Increment} {TargetMatType}";
 	}
 }

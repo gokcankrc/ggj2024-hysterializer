@@ -8,6 +8,7 @@ public class SoundManager : Singleton<SoundManager>
 {
 	public AudioListener listener;
 	public AudioSource sourcePrefab;
+	public AudioSource ClickSource;
 	[Range(0, 1)] public float Volume = 0.6f;
 
 	protected override void Awake()
@@ -32,5 +33,10 @@ public class SoundManager : Singleton<SoundManager>
 	private void SetVolume()
 	{
 		AudioListener.volume = Volume;
+	}
+
+	public static void PlayClickSound()
+	{
+		I.ClickSource.Play();
 	}
 }

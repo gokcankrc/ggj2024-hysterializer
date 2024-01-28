@@ -30,6 +30,7 @@ public class MapButton : MonoBehaviour, IPointerClickHandler
 	{
 		var mapMan = MapManager.I;
 		mapMan.Select(this);
+		SoundManager.PlayClickSound();
 	}
 
 	public void Finish()

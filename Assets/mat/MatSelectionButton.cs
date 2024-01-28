@@ -14,6 +14,7 @@ public class MatSelectionButton : MonoBehaviour, IPointerDownHandler, IPointerUp
 	[SerializeField] Color DisabledColor;
 	[SerializeField] Color DisabledAndSelectedColor;
 	[SerializeField] Color PressingColor;
+	[SerializeField] AudioClip DeselectClip;
 	public int CurrentResource => LevelManager.I.matCurrent[index];
 	public bool HasResource = true;
 	public bool isSelected = false;
@@ -35,9 +36,12 @@ public class MatSelectionButton : MonoBehaviour, IPointerDownHandler, IPointerUp
 	{
 		transform.localScale = Vector3.one * 1.0f;
 		if (!isSelected)
-			Select();
+		{ Select(); }
 		else
+		{
+			SoundManager.Play(DeselectClip);
 			Deselect();
+		}
 	}
 
 	public void OnPointerDown(PointerEventData eventData)
