@@ -34,6 +34,7 @@ namespace HexagonalGrid
 
 		public void PlaceSocketsInGrid(HexagonSockets socketShape)	
 		{
+			SocketNodes = new List<HexNode>();
 			var origin = new Vector2Int(0, 2);
 			foreach (Vector2Int relativeLoc in socketShape.hexLocations)
 			{
