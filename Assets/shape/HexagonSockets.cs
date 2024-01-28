@@ -6,12 +6,13 @@ using UnityEngine;
 public class HexagonSockets : ScriptableObject
 {
 	public GameObject GunVisual;
-	public Vector2 GunVisualShift;
+	public Vector3 GunVisualShift;
 	public Vector2 OriginShift;
+	public float ScaleOverride = 60;
 	public List<Vector2Int> hexLocations;
 
 	public void PlaceVisual(Transform visualTr)
 	{
-
+		visualTr.localPosition += GunVisualShift;
 	}
 }

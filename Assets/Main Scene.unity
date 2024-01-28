@@ -1773,7 +1773,7 @@ MonoBehaviour:
   gridSize: {x: 12, y: 8}
   tileObject: {fileID: 585381958492203597, guid: 863f767b91604fb4d970906b53190269, type: 3}
   emptyTileObject: {fileID: 1382327956946590208, guid: cc6a343ba3f5a8b45be251a93c2ce644, type: 3}
-  GridScale: 100
+  GridScale: 60
 --- !u!1 &671909807
 GameObject:
   m_ObjectHideFlags: 0
@@ -1836,6 +1836,7 @@ MonoBehaviour:
   SelectedMap: {fileID: 0}
   SelectionCircle: {fileID: 1393416931}
   SelectedGunID: 0
+  CurrentSelectedGun: {fileID: 556939122419087963}
 --- !u!1 &699550509
 GameObject:
   m_ObjectHideFlags: 0
@@ -3429,7 +3430,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -5160,7 +5161,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -5881,6 +5882,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Gun 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4595378067226868854, guid: 28a0b1075137d914e9156468d6d43ee5, type: 3}
+      propertyPath: Selected
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7533743053488379998, guid: 28a0b1075137d914e9156468d6d43ee5, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -5963,6 +5968,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 7533743053488379998, guid: 28a0b1075137d914e9156468d6d43ee5, type: 3}
   m_PrefabInstance: {fileID: 556939122419087961}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &556939122419087963 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4595378067226868854, guid: 28a0b1075137d914e9156468d6d43ee5, type: 3}
+  m_PrefabInstance: {fileID: 556939122419087961}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c49df82101b7ab45b4250b9d00c2d6a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &8229871767312492079
 PrefabInstance:
   m_ObjectHideFlags: 0

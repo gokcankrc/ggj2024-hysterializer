@@ -3,6 +3,7 @@ using System;
 using HexagonalGrid;
 using UnityEngine;
 using System.Collections.Generic;
+using UnityEngine.Tilemaps;
 
 public class LevelManager : Singleton<LevelManager>
 {
@@ -33,8 +34,11 @@ public class LevelManager : Singleton<LevelManager>
 		foreach (Transform child in GunVisualParent)
 			Destroy(child.gameObject);
 
-		HexGrid.I.FillGrid();
 		HexagonSockets gun = Guns[MapManager.I.SelectedGunID];
+		HexVector.XScale = gun.ScaleOverride;
+		HexVector.YScale = gun.ScaleOverride;
+
+		HexGrid.I.FillGrid();
 		HexGrid.I.PlaceSocketsInGrid(gun);
 		var tr = HexGrid.I.transform;
 		tr.localPosition = gun.OriginShift;

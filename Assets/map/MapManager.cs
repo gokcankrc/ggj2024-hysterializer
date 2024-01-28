@@ -12,6 +12,8 @@ public class MapManager : Singleton<MapManager>
 	public MapButton SelectedMap;
 	public GameObject SelectionCircle;
 	public int SelectedGunID;
+	public GunSelection CurrentSelectedGun;
+
 
 	protected override void Awake()
 	{

@@ -12,7 +12,6 @@ namespace HexagonalGrid
 		[SerializeField] private Vector2Int gridSize = new Vector2Int(8, 9);
 		[SerializeField] private HexNode tileObject;
 		[SerializeField] private HexNode emptyTileObject;
-		[SerializeField] private float GridScale;
 
 		public static HexNode[,] Grid;
 		public static List<HexNode> SocketNodes;
@@ -25,8 +24,6 @@ namespace HexagonalGrid
 
 		public void FillGrid()
 		{
-			HexVector.XScale = GridScale;
-			HexVector.YScale = GridScale;
 			ClearGrid();
 			Grid = new HexNode[gridSize.x, gridSize.y];
 			HexVector.Origin = transform.position;
