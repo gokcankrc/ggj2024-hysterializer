@@ -49,7 +49,7 @@ public class MatSelectionButton : MonoBehaviour, IPointerDownHandler, IPointerUp
 	{
 		isSelected = true;
 		MatSelectionManager.I.MatHasBeenSelected(this);
-		transform.localScale = Vector3.one * 1.12f;
+		transform.localScale = Vector3.one * 1.2f;
 		RefreshState();
 	}
 

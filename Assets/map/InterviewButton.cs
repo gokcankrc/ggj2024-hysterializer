@@ -8,7 +8,8 @@ public class InterviewButton : MonoBehaviour
 	public void OnClick()
 	{
 		var map = MapManager.I.SelectedMap;
-		if (!map.IsUnlocked) return;
+		if (map == null) return;
+        if (!map.IsUnlocked) return;
 
 		// Start map
 		LevelManager.I.EnterInterview(map);
