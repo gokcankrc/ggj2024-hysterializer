@@ -12,7 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 044b4e15eaafc8b4fb443d09aa0a5e21, type: 3}
   m_Name: 31 being
   m_EditorClassIdentifier: 
-  Portrait: {fileID: 0}
+  Portrait: {fileID: 21300000, guid: 339621083a56b94459224740989d5eb5, type: 3}
+  PortraitLaugh: {fileID: 21300000, guid: b7ece868a80e8d542a5e10692719e270, type: 3}
   Requirements:
     PotencyAdd: 30
     ResistancesPenetrated: 1
+  LaughAudioClip: {fileID: 0}
