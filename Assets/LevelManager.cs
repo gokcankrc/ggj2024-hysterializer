@@ -38,6 +38,8 @@ public class LevelManager : Singleton<LevelManager>
 		HexVector.XScale = gun.ScaleOverride;
 		HexVector.YScale = gun.ScaleOverride;
 		EnemyDescriptionHandler.I.SetEnemy(map.Candidate);
+		var img = PortraitHandler.I.image;
+		img.sprite = Candidate.Portrait;
 
 		HexGrid.I.FillGrid();
 		HexGrid.I.PlaceSocketsInGrid(gun);
@@ -52,5 +54,11 @@ public class LevelManager : Singleton<LevelManager>
 		var resMang = ResourcesManager.I;
 		for (int i = 0; i < MatLength; i++)
 			matCurrent[i] = resMang.matMax[i];
+	}
+
+	public void SetLaughingPortrait()
+	{
+		var a = PortraitHandler.I.image;
+		a.sprite = Candidate.PortraitLaugh;
 	}
 }
