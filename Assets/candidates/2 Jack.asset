@@ -10,10 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 044b4e15eaafc8b4fb443d09aa0a5e21, type: 3}
-  m_Name: Bill
+  m_Name: 2 Jack
   m_EditorClassIdentifier: 
   Portrait: {fileID: 0}
   Requirements:
-    Text: 
-    PotencyAdd: 5
+    PotencyAdd: 30
     ResistancesPenetrated: 0

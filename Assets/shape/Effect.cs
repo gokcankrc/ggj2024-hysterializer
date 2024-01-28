@@ -1,6 +1,8 @@
 ﻿
 
 using System;
+using System.Collections.Generic;
+using System.Data;
 
 [Serializable]
 public class Effect
@@ -12,6 +14,20 @@ public class Effect
 	{
 		PotencyAdd += effect.PotencyAdd;
 		ResistancesPenetrated |= effect.ResistancesPenetrated;
+	}
+
+	public string GetBeingPower()
+	{
+		var text = $"Needs {PotencyAdd} potency\n";
+
+		List<string> resistances = new List<string>();
+		foreach (ResistanceTypes r in Enum.GetValues(typeof(ResistanceTypes)))
+			if ((ResistancesPenetrated & r) != 0)
+				resistances.Add(r.ToString());
+
+		foreach (var resistance in resistances)
+			text += $"{resistance}";
+		return text;
 	}
 }
 

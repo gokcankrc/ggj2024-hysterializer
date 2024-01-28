@@ -10,4 +10,9 @@ public class GunUnlockUpgrade : Upgrade
 	{
 		ResourcesManager.I.GunLevel = (int)Mathf.Round(MathF.Max(ResourcesManager.I.GunLevel, GunIndex));
 	}
+
+	public override string GetText()
+	{
+		return "Unlocks a new gun!";
+	}
 }

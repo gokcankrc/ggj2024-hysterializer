@@ -7,8 +7,7 @@ public class MatSelectionManager : Singleton<MatSelectionManager>
 
 	public void MatHasBeenSelected(MatSelectionButton matSelectionButton)
 	{
-		if (CurrentlySelectedMatButton != null)
-			CurrentlySelectedMatButton.Deselect();
+		Deselect();
 
 		CurrentlySelectedMatButton = matSelectionButton;
 	}
@@ -31,5 +30,12 @@ public class MatSelectionManager : Singleton<MatSelectionManager>
 		hexNode.DetachMat();
 		if (selection.CurrentResource == 0) return;
 		hexNode.AttachMat(selection);
+	}
+
+	public void Deselect()
+	{
+		if (CurrentlySelectedMatButton != null)
+			CurrentlySelectedMatButton.Deselect();
+		CurrentlySelectedMatButton = null;
 	}
 }

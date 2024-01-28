@@ -11,7 +11,7 @@ public class MapButton : MonoBehaviour, IPointerClickHandler
 	public bool IsUnlocked = false;
 	public bool HasBeenFinished = false;
 	public int Index = -1;
-	public string text;
+	[TextArea] public string text;
 	public Being Candidate;
 	public List<MapButton> Unlocks = new List<MapButton>();
 	[SerializeReference, SubclassSelector] public List<Upgrade> Upgrades = new List<Upgrade>();

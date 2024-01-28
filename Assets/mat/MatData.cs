@@ -13,8 +13,8 @@ public class MatData : ScriptableObject
 
 public enum MatType
 {
-	A = 0,
-	B = 1,
-	C = 2,
+	Eye = 0,
+	Finger = 1,
+	Tooth = 2,
 	D = 3,
 }

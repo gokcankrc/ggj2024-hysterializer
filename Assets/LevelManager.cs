@@ -23,6 +23,7 @@ public class LevelManager : Singleton<LevelManager>
 	public void EnterInterview(MapButton map)
 	{
 		GetCurrentMaxResources();
+		MatSelectionManager.I.Deselect();
 		ResourcesRefresh?.Invoke();
 		Candidate = map.Candidate;
 		// Make portrey of candidate on the face

@@ -32,8 +32,20 @@ public class MapManager : Singleton<MapManager>
 			SelectedMap.Deselect();
 		SelectedMap = mapButton;
 		LockedText.enabled = !SelectedMap.IsUnlocked;
-		SelectionText.text = SelectedMap.text;
+
+		SelectionText.text = GetDescriptionText();
 		SelectionCircle.SetActive(true);
 		SelectionCircle.transform.position = SelectedMap.transform.position;
+	}
+
+	public string GetDescriptionText()
+	{
+		var text = SelectedMap.text;
+		text += "\n\n\n";
+		text += SelectedMap.Candidate.Requirements.GetBeingPower();
+		text += "\n\n";
+		foreach (var item in SelectedMap.Upgrades)
+			text += item.GetText();
+		return text;
 	}
 }

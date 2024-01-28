@@ -10,4 +10,10 @@ public class MatIncreaseUpgrade : Upgrade
 	{
 		ResourcesManager.I.matMax[((int)TargetMatType)] += Increment;
 	}
+
+	public override string GetText()
+	{
+
+		return $"Gives {Increment} {TargetMatType}";
+	}
 }
