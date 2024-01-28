@@ -13,7 +13,9 @@ public class MatIncreaseUpgrade : Upgrade
 
 	public override string GetText()
 	{
+		var a = new string[] { "zero", "one", "two", "three" };
 
-		return $"Gives {Increment} {TargetMatType}";
+
+		return $"Gives {a[Increment]} {TargetMatType}";
 	}
 }
