@@ -15,6 +15,6 @@ MonoBehaviour:
   Portrait: {fileID: 21300000, guid: c170be7b6f76d424da09c395ebe12990, type: 3}
   PortraitLaugh: {fileID: 21300000, guid: 85fa78582afa64144a7863fec4fa7aea, type: 3}
   Requirements:
-    PotencyAdd: 30
+    PotencyAdd: 40
     ResistancesPenetrated: 1
   LaughAudioClip: {fileID: 0}
