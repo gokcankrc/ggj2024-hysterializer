@@ -10,6 +10,7 @@ public class HexNode : MonoBehaviour, IPointerClickHandler
 	public NodeMatVisual currentNodeMatVisual;
 	public MatSelectionButton currentAttachedMatButton;
 	public int CurrentAttachedIndex = -1;
+	public AudioClip audioClip;
 
 	public virtual void OnPointerClick(PointerEventData eventData)
 	{
@@ -26,6 +27,7 @@ public class HexNode : MonoBehaviour, IPointerClickHandler
 		currentAttachedMatButton = selectedMatButton;
 		currentNodeMatVisual = Instantiate(selectedMatButton.MatData.NodeMatVisual, transform.position, Quaternion.identity, transform);
 		CurrentAttachedIndex = selectedMatButton.MatData.Index;
+		SoundManager.Play(audioClip);
 
 		currentAttachedMatButton.AvailableDown();
 	}

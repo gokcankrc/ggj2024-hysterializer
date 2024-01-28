@@ -53,6 +53,7 @@ MonoBehaviour:
   currentNodeMatVisual: {fileID: 0}
   currentAttachedMatButton: {fileID: 0}
   CurrentAttachedIndex: -1
+  audioClip: {fileID: 8300000, guid: e19e84f22f82c544e80c50765f67c373, type: 3}
 --- !u!1 &8303024995683319075
 GameObject:
   m_ObjectHideFlags: 0

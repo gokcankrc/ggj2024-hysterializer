@@ -40,9 +40,11 @@ public class MapManager : Singleton<MapManager>
 
 	public string GetDescriptionText()
 	{
+
 		var text = SelectedMap.text;
 		text += "\n\n\n";
-		text += SelectedMap.Candidate.Requirements.GetBeingPower();
+		if (SelectedMap.Candidate != null)
+			text += SelectedMap.Candidate.Requirements.GetBeingPower();
 		text += "\n\n";
 		foreach (var item in SelectedMap.Upgrades)
 			text += item.GetText();
