@@ -62,11 +62,11 @@ MonoBehaviour:
   MatData: {fileID: 0}
   text: {fileID: 1321395628076411634}
   image: {fileID: 4255773626152743606}
-  EnabledColor: {r: 1, g: 1, b: 1, a: 1}
+  EnabledColor: {r: 0.851, g: 0.851, b: 0.851, a: 1}
   SelectedColor: {r: 1, g: 1, b: 1, a: 1}
-  DisabledColor: {r: 0.6981132, g: 0.6981132, b: 0.6981132, a: 1}
-  DisabledAndSelectedColor: {r: 0.69803923, g: 0.69803923, b: 0.69803923, a: 1}
-  PressingColor: {r: 0.7169812, g: 0.7169812, b: 0.7169812, a: 1}
+  DisabledColor: {r: 0.65, g: 0.65, b: 0.65, a: 1}
+  DisabledAndSelectedColor: {r: 0.65, g: 0.65, b: 0.65, a: 1}
+  PressingColor: {r: 0.85, g: 0.85, b: 0.85, a: 1}
   HasResource: 1
   isSelected: 0
 --- !u!1 &7477977363174140875

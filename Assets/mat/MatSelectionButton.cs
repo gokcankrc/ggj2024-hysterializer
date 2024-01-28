@@ -33,6 +33,7 @@ public class MatSelectionButton : MonoBehaviour, IPointerDownHandler, IPointerUp
 
 	public void OnPointerUp(PointerEventData eventData)
 	{
+		transform.localScale = Vector3.one * 1.0f;
 		if (!isSelected)
 			Select();
 		else
@@ -41,6 +42,7 @@ public class MatSelectionButton : MonoBehaviour, IPointerDownHandler, IPointerUp
 
 	public void OnPointerDown(PointerEventData eventData)
 	{
+		transform.localScale = Vector3.one * 0.9f;
 		if (HasResource)
 			SetColor(PressingColor);
 	}
