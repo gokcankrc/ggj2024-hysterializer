@@ -32,7 +32,7 @@ public class RecruitButton : MonoBehaviour
 		{
 			//shoot dart
 			SoundManager.Play(DartShootSoundEffect);
-			yield return new WaitForSeconds(2);
+			yield return new WaitForSeconds(1);
 			//show portrait
 			LevelManager.I.SetLaughingPortrait();
 			yield return new WaitForSeconds(2);
